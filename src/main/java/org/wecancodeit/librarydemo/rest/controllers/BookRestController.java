@@ -35,13 +35,20 @@ public class BookRestController {
     @PostMapping("/api/books/{id}/add-hashtag")
     public Optional<Book> addHashTagToBook(@RequestBody String body, @PathVariable Long id) throws JSONException {
         JSONObject newHashTag = new JSONObject(body);
-        String hashTagName = newHashTag.getString("hashTagName");
+        String hashTagName = newHashTag.getString("name");
         Optional<HashTag> hashTagToAddOpt = hashTagRepo.findByName(hashTagName);
         //if the hashtag exists in the database it can be included on the particular book
         if (hashTagToAddOpt.isPresent()) {
             Optional<Book> bookToAddHashTagToOpt = bookRepo.findById(id);
             Book bookToAddHashTagTo = bookToAddHashTagToOpt.get();
             bookToAddHashTagTo.addHashTag(hashTagToAddOpt.get());
+            bookRepo.save(bookToAddHashTagTo);
+        } else {
+            HashTag newHashTagToSave =new HashTag (hashTagName);
+            hashTagRepo.save(newHashTagToSave);
+            Optional<Book> bookToAddHashTagToOpt = bookRepo.findById(id);
+            Book bookToAddHashTagTo = bookToAddHashTagToOpt.get();
+            bookToAddHashTagTo.addHashTag(newHashTagToSave);
             bookRepo.save(bookToAddHashTagTo);
         }
         return bookRepo.findById(id);

@@ -25,7 +25,7 @@ public class HashTagRestController {
     @PostMapping("/api/add-hashtag")
     public Collection<HashTag> addHashTag(@RequestBody String body) throws JSONException {
         JSONObject newHashTag = new JSONObject(body);
-        String hashTagName = newHashTag.getString("hashTagName");
+        String hashTagName = newHashTag.getString("name");
         Optional<HashTag> hashTagToAddOpt = hashTagRepo.findByName(hashTagName);
         //add hashtag if not already in the database
         if (hashTagToAddOpt.isEmpty()) {
