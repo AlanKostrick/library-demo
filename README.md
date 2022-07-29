@@ -16,7 +16,7 @@ This project contains a REST API Spring backend and an initial client side React
 - This application runs an in memory H2 database, therefore any interactions with the database happen locally and any `POST`, `DELETE` requests will be reset if the Spring server is shut down and restarted
 - One regret is the inconsistencies in `hashtag` versus `hashTag` in several references throughout the application please be careful of how the backend is referencing this variable when interacting in the front end 
 
-## React client notes
+## React Client Notes
 The following dependencies have been installed in the React application
 - `axios` to handle promises, asynchronous calls, any CRUD operations on the API
 - `react-css-modules` to provide unique style sheets for each component (does not matter if classes have same names in other files there will be no conflicts...this is great in a team setting so that members can work on features and not worry about their css selectors interfering with other parts of the application)
