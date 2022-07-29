@@ -19,7 +19,7 @@ This project contains a REST API Spring backend and an initial client side React
 ## React client notes
 The following dependencies have been installed in the React application
 - `axios` to handle promises, asynchronous calls, any CRUD operations on the API
-- 'react-css-modules` to provide unique style sheets for each component (does not matter if classes have same names in other files there will be no conflicts...this is great in a team setting so that members can work on features and not worry about their css selectors interfering with other parts of the application)
-- react-router-dom` handles the front end routing architecture and custom url's that the client will request 
-- 'jest` comes prepackaged in React applications as its testing suite
+- `react-css-modules` to provide unique style sheets for each component (does not matter if classes have same names in other files there will be no conflicts...this is great in a team setting so that members can work on features and not worry about their css selectors interfering with other parts of the application)
+- `react-router-dom` handles the front end routing architecture and custom url's that the client will request 
+- `jest` comes prepackaged in React applications as its testing suite
 - `eslint-plugin-react` will provide warnings on code practices that could hang up deployments ... for example any references to unused variables in the front end will not allow for the application to deploy properly...Es Lint will catch these issues and warn the developer. 
