@@ -5,9 +5,9 @@ This project contains a REST API Spring backend and an initial client side React
 - `localhost:8080/api/books` will access the collection of books
 - `localhost:8080/api/books/{id}` will access a singular book by plugging in a numerical value for id
 - `localhost:8080/api/books/{id}/add-hashtag` will provide a `POST` request to add a hashtag to a book
-- 'localhost:8080/api/campuses` will access the collection of campuses
-- 'localhost:8080/api/campuses/{campuseId}` will access a singular campus by plugging in a numerical value for campusId
-- 'localhost:8080/api/hashtags' will access the collection of hashtags
+- `localhost:8080/api/campuses` will access the collection of campuses
+- `localhost:8080/api/campuses/{campuseId}` will access a singular campus by plugging in a numerical value for campusId
+- `localhost:8080/api/hashtags' will access the collection of hashtags
 - `localhost:8080/api/add-hashtag` will provide a `POST` request to add a hashtag to the database, NOT attaching it to a book 
 - `localhost:8080/api/hashtags/{id}/delete-hashtag` will provide a `DELETE` request to remove a hashtag 
 
