@@ -1,5 +1,5 @@
 # library-demo
-This project contains a REST API Spring backend and an initial client side React application located in `src.main/resources/static/js`
+This project contains a REST API Spring backend and an initial client side React application located in `src.main/resources/static/js`. While not ideal to embed the React client in the Spring application it helps for Heroku deployments. Heroku can deploy Spring applications by looking for all front end resources in the `src.main/resources/static/` ...In a real environment, the client and server are both set up in different repositories and have separate deployments, but this setup shortcuts that process for demo purposes. 
 
 ## API Endpoints
 - `localhost:8080/api/books` will access the collection of books
